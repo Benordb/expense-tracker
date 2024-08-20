@@ -29,7 +29,7 @@ export const AddRecord = ({ text }) => {
   const [chooseType, setChooseType] = useState(true);
   const recordForm = useFormik({
     initialValues: {
-      userId: user.id,
+      userId: user?.id,
       categoryId: "",
       amount: "",
       payee: "",

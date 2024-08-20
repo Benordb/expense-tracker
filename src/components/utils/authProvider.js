@@ -52,22 +52,6 @@ export const AuthProvider = ({ children }) => {
             toast.error(err.response.data.message);
         }
     };
-    const createCategory = async (name, color, icon_name) => {
-        try {
-            const token = localStorage.getItem("token");
-
-            if (!token) return;
-            const res = await api.post("/categories", { name, color, icon_name },
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                })
-            setCategories([...categories, res.data])
-        } catch (err) {
-            console.error(err)
-        }
-    }
     useEffect(() => {
         const loadUser = async () => {
             try {
