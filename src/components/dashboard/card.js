@@ -21,7 +21,7 @@ export const Card = () => {
             <div className="flex justify-between items-end">
                 <div>
                     <p className="text-sky-500">Cash</p>
-                    <p className="text-2xl">10,000,000</p>
+                    <p className="text-2xl">0</p>
                 </div>
                 <LuNfc />
             </div>

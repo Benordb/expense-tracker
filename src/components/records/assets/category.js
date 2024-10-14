@@ -24,7 +24,7 @@ export const Category = () => {
       }
     };
     getData();
-  }, [categories]);
+  }, []);
   const handleChoose = (item) => {
     chooseCategories.find((el) => el === item.id)
       ? setChooseCategories([

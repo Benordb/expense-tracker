@@ -7,15 +7,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const chartData = [
-  { month: "January", income: 186, expense: 80 },
-  { month: "February", income: 105, expense: 200 },
-  { month: "March", income: 237, expense: 120 },
-  { month: "April", income: 73, expense: 190 },
-  { month: "May", income: 209, expense: 130 },
-  { month: "June", income: 214, expense: 140 },
-  { month: "July", income: 244, expense: 160 },
-];
+
 
 const chartConfig = {
   income: {
@@ -27,7 +19,21 @@ const chartConfig = {
     color: "#F97316",
   },
 };
-export const MultipleChart = () => {
+export const MultipleChart = ({ income, expense }) => {
+  const chartData = [
+    { month: "January", income: 0, expense: 0 },
+    { month: "February", income: 0, expense: 0 },
+    { month: "March", income: 0, expense: 0 },
+    { month: "April", income: 0, expense: 0 },
+    { month: "May", income: 0, expense: 0 },
+    { month: "June", income: 0, expense: 0 },
+    { month: "July", income: 0, expense: 0 },
+    { month: "August", income: 0, expense: 0 },
+    { month: "September", income: 0, expense: 0 },
+    { month: "October", income: income, expense: expense },
+    { month: "November", income: 0, expense: 0 },
+    { month: "December", income: 0, expense: 0 },
+  ];
   return (
     <div className="bg-white shadow-sm h-72 rounded-2xl col-span-3">
       <div className="border-b-2 py-4 px-6 flex justify-between items-center font-bold">

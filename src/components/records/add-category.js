@@ -24,7 +24,6 @@ import { useFormik } from "formik";
 import * as Icons from "react-icons/fa6";
 import * as yup from "yup";
 import { api } from "@/lib/axios";
-import { useAuth } from "../utils/authProvider";
 import { useContexts } from "../utils/context";
 const defaultIcons = [
   "FaHouse",
